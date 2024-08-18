@@ -14,7 +14,7 @@ import {
   ParagraphScore,
   ScoreSpan,
   ItemsImagesContainer,
-  //eslint-disable-next-line no-unused-vars
+  // eslint-disable-next-line no-unused-vars
   PlayAgainButton,
   PopUpContainer,
   PopUpButton,
@@ -37,7 +37,7 @@ class Game extends Component {
 
   onGetResult = () => {
     const {myChoice, apponentChoice, resultMessage} = this.state
-    //eslint-disable-next-line no-unused-vars
+    // eslint-disable-next-line no-unused-vars
 
     return (
       <GameResultView
@@ -49,7 +49,7 @@ class Game extends Component {
     )
   }
 
-  onGetButtonId = (id, image) => {
+  onGetButtonId = (id, imageUrl) => {
     const {choicesList} = this.props
     const number = Math.floor(Math.random() * choicesList.length)
     const opponentChoice = choicesList[number]
@@ -73,7 +73,7 @@ class Game extends Component {
 
     this.setState(prevState => ({
       showResult: true,
-      myChoice: {id, image},
+      myChoice: {id, imageUrl},
       apponentChoice: opponentChoice,
       score: prevState.score + scoreChange,
       resultMessage,

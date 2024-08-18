@@ -2,11 +2,11 @@ import {ButtonLiContainer, ButtonImage, ImageItem} from './styledComponents'
 
 const Buttons = props => {
   const {buttonDetails, onGetId} = props
-  const {id, image} = buttonDetails
+  const {id, imageUrl} = buttonDetails
   const lowerCaseId = id.toLowerCase()
 
   const onClickButton = () => {
-    onGetId(id, image)
+    onGetId(id, imageUrl)
   }
 
   return (
@@ -16,7 +16,7 @@ const Buttons = props => {
         data-testid={`${lowerCaseId}Button`}
         onClick={onClickButton}
       >
-        <ImageItem src={image} alt={id} />
+        <ImageItem src={imageUrl} alt={id} />
       </ButtonImage>
     </ButtonLiContainer>
   )
